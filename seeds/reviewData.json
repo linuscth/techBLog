@@ -1,0 +1,17 @@
+[
+    {
+        "user_id": "1",
+        "review_topic": "why MVC is so important",
+        "review_detail": "MVC allow programmers to have a true separation of concerns"
+    },
+    {
+        "user_id": "2",
+        "review_topic": "Authentication vs. Authoriztion",
+        "review_detail": "there is a difference between authentication and authoriization"
+    },
+    {
+        "user_id": "3",
+        "review_topic": "object-Relational Mapping",
+        "review_detail": "I have really loved learning about ORMs"
+    }
+]

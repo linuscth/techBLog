@@ -1,0 +1,37 @@
+[
+    {
+        "name": "linuscth",
+        "email": "linus@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "charlieccc",
+        "email": "charlie@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "borisW",
+        "email": "boris@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "joannieW",
+        "email": "joannie@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "ronaldccc",
+        "email": "ronaldc@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "stephanieL",
+        "email": "steph123@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "kittyc",
+        "email": "kittyC@gmail.com",
+        "password": "password12345"
+    }
+]

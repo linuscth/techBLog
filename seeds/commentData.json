@@ -1,0 +1,18 @@
+[
+    {
+        "user_id": 4,
+        "review_id": 1,
+        "comment_detail": "agree, MVC really helps allow programmers to view problems separately"
+    },
+    {
+        "user_id": 5,
+        "review_id": 2,
+        "comment_detail": "yeah right u are so right"
+    },
+    {
+        "user_id": 6,
+        "review_id": 3,
+        "comment_detail": "same here bro"
+    }
+    
+]
