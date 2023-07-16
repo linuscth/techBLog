@@ -4,9 +4,18 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-        const getAllReviewData = Review.findAll();
+        const getAllReviewData = await Review.findAll({
+            include: {
+                model: User,
+                attributes: ['name']
+            }
+        });
 
-        res.render('homepage')
+        // to modify the data only show what we need
+        const reviews = getAllReviewData.map((review) => review.get({ plain: true }));
+
+
+        res.render('homepage', { reviews })
     } catch (error) {
         res.status(500).json(error)
     }
