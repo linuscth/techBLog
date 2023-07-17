@@ -3,11 +3,7 @@ const { User, Review, Comment } = require('../../models');
 
 
 // api/users routes
-
-router.get('/', async (req, res) => {
-    res.json(req.session)
-})
-
+req
 
 router.post('/', async (req, res) => {
     try {

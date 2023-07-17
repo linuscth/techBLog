@@ -5,6 +5,11 @@
         "comment_detail": "agree, MVC really helps allow programmers to view problems separately"
     },
     {
+        "user_id": 3,
+        "review_id": 1,
+        "comment_detail": "testing2"
+    },
+    {
         "user_id": 5,
         "review_id": 2,
         "comment_detail": "yeah right u are so right"

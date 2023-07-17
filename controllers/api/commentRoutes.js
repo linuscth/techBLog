@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 //api/comments
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const AllComment = await Comment.findAll();
 
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:review_id', async (req, res) => {
+router.get('/:review_id', withAuth, async (req, res) => {
     try {
         const getAllComment = await Comment.findAll({ where: { review_id: req.params.review_id } });
 
@@ -25,7 +25,7 @@ router.get('/:review_id', async (req, res) => {
 });
 
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
         const createNewComment = await Comment.create(
             {
@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
 });
 
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
     try {
         const deleteComment = await Comment.delete({
             where: {

@@ -2,14 +2,19 @@ const router = require('express').Router();
 const Review = require('../../models/Review');
 const withAuth = require('../../utils/auth')
 
-router.get('/', async (req, res) => {
-    try {
-        const getAllReviewData = await Review.findAll();
-        res.status(200).json(getAllReviewData);
-    } catch (error) {
-        res.status(500).json(error)
-    }
-});
+// router.get('/', async (req, res) => {
+//     try {
+//         const getAllReviewData = await Review.findAll({
+//             include: {
+//                 model: User,
+//                 attributes: ['name']
+//             }
+//         });
+//         res.status(200).json(getAllReviewData);
+//     } catch (error) {
+//         res.status(500).json(error)
+//     }
+// });
 
 router.post('/', withAuth, async (req, res) => {
     try {
