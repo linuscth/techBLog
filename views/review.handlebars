@@ -1,0 +1,16 @@
+<div>
+    <div class="reviewCard card p-3 ">
+        <div class="card-header  p-3  d-flex justify-content-between align-items-center">
+            <h4>{{review.review_topic}}</h4>
+            {{!-- <p>posted by {{review.user.name}}</p> --}}
+        </div>
+
+        <div class="card-body border border-2 rounded-bottom">
+            <p class="text-body-secondary">{{review.review_detail}}</p>
+        </div>
+
+    </div>
+    {{#each review.comments as |comment|}}
+    {{> comment-details}}
+    {{/each}}
+</div>
