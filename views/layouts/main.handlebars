@@ -19,13 +19,15 @@
 
                 <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 active"
                         href="/dashboard">Dashboard</a></li>
-
+                {{#if logged_in}}
+                <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 active logOut"
+                        href="/logOut">Logout</a>
+                </li>
+                {{else}}
                 <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 active"
                         href="/login">Login</a>
                 </li>
-
-                <li class="nav-item col-6 col-lg-auto"><a class="nav-link py-2 px-0 px-lg-2 active" href="">Logout</a>
-                </li>
+                {{/if}}
             </ul>
         </nav>
     </header>
@@ -43,6 +45,12 @@
         </div>
         <!-- Copyright -->
     </footer>
+
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
 </body>
 
 </html>

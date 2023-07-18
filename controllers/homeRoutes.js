@@ -53,7 +53,7 @@ router.get('/signup', (req, res) => {
     res.render('signup')
 })
 
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
@@ -63,7 +63,7 @@ router.get('/dashboard', async (req, res) => {
         const user = userData.get({ plain: true });
         console.log(user);
         res.render('dashboard', {
-            user,
+            ...user,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -83,6 +83,9 @@ router.get('/login', (req, res) => {
         res.redirect('/profile')
     }
     res.render('login')
+})
+router.get('/logOut', (req, res) => {
+    res.render('logOut')
 })
 
 
