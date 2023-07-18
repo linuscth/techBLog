@@ -3,7 +3,6 @@ const { User, Review, Comment } = require('../../models');
 
 
 // api/users routes
-req
 
 router.post('/', async (req, res) => {
     try {
@@ -11,11 +10,11 @@ router.post('/', async (req, res) => {
         if (!req.body) {
             return res.status(404).json({ message: 'please enter name/ email/ password ' })
         }
-        const createUSerData = await User.create(req.body);
+        const createUserData = await User.create(req.body);
         req.session.save(() => {
-            req.session.user_id = createUSerData.id;
+            req.session.user_id = createUserData.id;
             req.session.logged_in = true;
-            res.status(200).json(createUSerData);
+            res.status(200).json(createUserData);
         })
 
     } catch (error) {
